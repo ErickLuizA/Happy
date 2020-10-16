@@ -8,6 +8,7 @@ import {
   Nunito_800ExtraBold,
 } from '@expo-google-fonts/nunito'
 import { AppLoading } from 'expo'
+import { StatusBar } from 'react-native'
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -20,5 +21,10 @@ export default function App() {
     return <AppLoading />
   }
 
-  return <Main />
+  return (
+    <>
+      <StatusBar backgroundColor="#f9fafc" barStyle="dark-content" />
+      <Main />
+    </>
+  )
 }
