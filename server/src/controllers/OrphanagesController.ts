@@ -29,7 +29,7 @@ export default class OrphanagesController {
   }
 
   async create(request: Request, response: Response) {
-    const { name, latitude, longitude, about, instructions, opening_hours, open_on_weekends } = request.body
+    const { name, whatsapp, latitude, longitude, about, instructions, opening_hours, open_on_weekends } = request.body
 
     const orphanagesRepository = getRepository(Orphanage)
 
@@ -40,6 +40,7 @@ export default class OrphanagesController {
 
     const data = {
       name,
+      whatsapp,
       latitude,
       longitude,
       about,
@@ -51,6 +52,7 @@ export default class OrphanagesController {
 
     const schema = Yup.object().shape({
       name: Yup.string().required(),
+      whatsapp: Yup.string().required(),
       latitude: Yup.number().required(),
       longitude: Yup.number().required(),
       about: Yup.string().required().max(300),

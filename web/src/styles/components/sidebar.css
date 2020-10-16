@@ -1,4 +1,3 @@
-
 aside.app-sidebar {
   position: fixed;
   height: 100%;
@@ -37,4 +36,23 @@ aside.app-sidebar footer button {
 aside.app-sidebar footer a:hover,
 aside.app-sidebar footer button:hover {
   background: #17d6eb;
+}
+
+@media (max-width: 1000px) {
+  aside.app-sidebar {
+    position: sticky;
+    padding: 20px;
+    background: linear-gradient(329.54deg, #15b6d6 0%, #15d6d6 100%);
+ 
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  aside.app-sidebar img {
+    order: 2;
+  }
+  
 }

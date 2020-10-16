@@ -2,6 +2,7 @@
 export default interface OrphanagesProps {
   id: number
   name: string
+  whatsapp: string
   latitude: number
   longitude: number
   about: string
